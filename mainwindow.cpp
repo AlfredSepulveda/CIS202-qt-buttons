@@ -6,23 +6,23 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     button1 = new QPushButton("LED 1",this);
     button1->setCheckable(true);
-   // button1->move(button1->pos()+QPoint(button1->width()+5,0));
-    label1 = new QLabel("Off",this);
+    // button1->move(button1->pos()+QPoint(button1->width()+5,0));
+    label1 = new QLabel("off",this);
     label1->move(button1->pos()+QPoint(button1->width()+5,0));
     connect(button1,SIGNAL(toggled(bool)),this,SLOT(onbutton1Press(bool)));
 
     button2 = new QPushButton("LED 2",this);
     button2->setCheckable(true);
-    button2->move(button2->pos()+QPoint(button2->width()+20,10));
-    label2 = new QLabel("Off",this);
-    label2->move(button2->pos()+QPoint(button2->width()+10,10));
+    button2->move(button1->pos()+QPoint(button2->height()-30,35));
+    label2 = new QLabel("off",this);
+    label2->move(button2->pos()+QPoint(button2->width()+5,0));
     connect(button2,SIGNAL(toggled(bool)),this,SLOT(onbutton2Press(bool)));
 
     button3 = new QPushButton("LED 3",this);
     button3->setCheckable(true);
-    button3->move(button3->pos()+QPoint(button3->width()+20,15));
-    label3 = new QLabel("Off",this);
-    label3->move(button3->pos()+QPoint(button3->width()+20,15));
+    button3->move(button2->pos()+QPoint(button3->height()-30,35));
+    label3 = new QLabel("off",this);
+    label3->move(button3->pos()+QPoint(button3->width()+5,0));
     connect(button3,SIGNAL(toggled(bool)),this,SLOT(onbutton3Press(bool)));
 
 }
